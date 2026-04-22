@@ -1,0 +1,1 @@
+(()=>{(()=>{var i={};window.addEventListener("beforeunload",()=>{const d="loading-bar";let e=document.getElementById(d);if(e){e.style.width="5%";return}e=document.createElement("div"),e.id=d,document.body.appendChild(e),e.style.width="5%",setTimeout(()=>{e.style.width="30%"},100),setInterval(()=>{let t=parseInt(e.style.width,10);t<90&&(t+=5,e.style.width=t+"%")},1e3)})})();})();

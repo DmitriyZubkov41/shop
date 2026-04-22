@@ -1,0 +1,1 @@
+(()=>{(()=>{"use strict";var a={};class c{create(t){const s=this._tag("","select");return t.forEach(e=>{e.classList.add(this._class("__option")),s.appendChild(e)}),s}_tag(t="",s="div"){const e=document.createElement(s);return e.classList.add(this._class(t)),e}_class(t){return"ui-input-select"+t}}window.inputSelect=new c})();})();

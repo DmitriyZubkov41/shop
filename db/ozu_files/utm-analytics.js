@@ -1,0 +1,1 @@
+(()=>{(()=>{var r={};(()=>{const t=new URLSearchParams(window.location.search),o=/^utm_/,a={event:"UTM"};t.forEach((n,e)=>{o.test(e)&&(a[e]=n)}),1<Object.keys(a).length&&(window.dataLayer=window.dataLayer||[],window.dataLayer.push(a))})()})();})();

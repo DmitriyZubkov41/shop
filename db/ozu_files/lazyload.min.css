@@ -1,0 +1,1 @@
+img[data-src],img[data-srcset]{transition:opacity .3s ease-in;}img[data-src]:not(.loaded),img[data-srcset]:not(.loaded){display:block;min-height:1px;}img.loaded[data-src],img.loaded[data-srcset]{opacity: 1;}img:not([src]){visibility:hidden;opacity: 0;}
