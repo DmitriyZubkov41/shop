@@ -39,6 +39,7 @@ docker run --name server_postgres \
 
 <details>
 <summary>Код make_product.py</summary>
+
 ```python
 
 from bs4 import BeautifulSoup
@@ -77,6 +78,7 @@ if __name__ == "__main__":
         print(pr)
 
  ```
+
 </details>
 
 ## Работа с базой данных ##
@@ -342,6 +344,7 @@ FROM percent_profit;
 
 <details>
 <summary>Выручка по месяцам</summary>
+
 '''python
 
 import pandas as pd
@@ -392,8 +395,7 @@ plt.xticks(rotation=45, ha='right')
 
 plt.show()
 
-'''
-</details>
+'''    </details>
 
 Получился такой график:
 
@@ -401,7 +403,7 @@ plt.show()
 
 <details>
 <summary>Количество заказов по месяцам</summary>
-'''python
+    '''python
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -438,7 +440,6 @@ plt.ylabel('Количество заказов', fontsize=12)
 
 plt.show()
 
-'''
-</details>
+'''    </details>
 
 ![alt](images/orders.png)
