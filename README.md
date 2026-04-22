@@ -38,8 +38,8 @@ docker run --name server_postgres \
 Первоначальный вариант таблицы products не понравился, поэтому написал ещё один модуль make_product.py. В нем парсил сохранённые локально две веб-страницы с сайта dns.ru. В итоге записал в products 54 реальных товара с dns.ru (мониторы и озу).
 
 <details>
-  <summary>Код make_product.py</summary>
-```python
+<summary>Код make_product.py</summary>
+ ```python
 from bs4 import BeautifulSoup
 
 def get_products():
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     print("Количество продуктов:", len(products))
     for pr in products:
         print(pr)
-```
+ ```
 </details>
 
 ## Работа с базой данных ##
@@ -165,7 +165,7 @@ FROM (
 ) AS order_totals;
 ```
 
-#### Средний чек для всех статусов ####:
+#### Средний чек для всех статусов ####
 ```sql
 --Средник чек по всем заказам
 SELECT 
