@@ -39,7 +39,8 @@ docker run --name server_postgres \
 
 <details>
 <summary>Код make_product.py</summary>
- ```python
+ ```
+python
 
 from bs4 import BeautifulSoup
 
