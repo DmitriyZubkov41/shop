@@ -40,6 +40,7 @@ docker run --name server_postgres \
 <details>
 <summary>Код make_product.py</summary>
  ```python
+
 from bs4 import BeautifulSoup
 
 def get_products():
@@ -74,6 +75,7 @@ if __name__ == "__main__":
     print("Количество продуктов:", len(products))
     for pr in products:
         print(pr)
+
  ```
 </details>
 
@@ -341,6 +343,7 @@ FROM percent_profit;
 <details>
 <summary>Выручка по месяцам</summary>
 '''python
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
@@ -388,6 +391,7 @@ plt.ylabel('Выручка в млн. руб', fontsize=12)
 plt.xticks(rotation=45, ha='right')
 
 plt.show()
+
 '''
 </details>
 
@@ -398,6 +402,7 @@ plt.show()
 <details>
 <summary>Количество заказов по месяцам</summary>
 '''python
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
@@ -432,6 +437,7 @@ plt.xlabel('Месяцы', fontsize=12)
 plt.ylabel('Количество заказов', fontsize=12)
 
 plt.show()
+
 '''
 </details>
 
