@@ -351,7 +351,7 @@ FROM percent_profit;
 
 ![alt](images/sql6.png)
 
-## Визуализация в Python##
+## Визуализация в Python ##
 Рисовать буду в Jupyter Notebook (файл profit.ipynb) используя питоновскую библиотеку matplotlib.
 
 <details>
