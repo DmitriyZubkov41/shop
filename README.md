@@ -78,8 +78,7 @@ if __name__ == "__main__":
         print(pr)
 
  ```
-
-</details>
+/details>
 
 ## Работа с базой данных ##
 Для подключения к базе данных пробовал разные варианты инструментов, в конце концов остановился на DBeaver.
@@ -141,6 +140,8 @@ WHERE status = 'completed'
 GROUP BY DATE_TRUNC('month', order_date)
 ORDER BY Месяц;
 ```
+![alt](images/sql.png)
+
 
 2. #### Средний чек для completed заказов ####
 ```sql
@@ -169,6 +170,8 @@ FROM (
 ) AS order_totals;
 ```
 
+![alt](images/sql1.png)
+
 #### Средний чек для всех статусов ####
 ```sql
 --Средник чек по всем заказам
@@ -183,6 +186,8 @@ FROM (
     GROUP BY order_id
 ) AS order_totals;
 ```
+
+![alt](images/sql2.png)
 
 3. #### Количество заказов по статусам ####
 ```sql
@@ -227,6 +232,8 @@ ORDER BY Сумма DESC
 LIMIT 10;
 ```
 
+![alt](images/sql3.png)
+
 5. #### Топ-10 товаров по выручке и по количеству продаж ####
 ```sql
 --top 10 товаров по выручке
@@ -242,7 +249,11 @@ WHERE status = 'completed'
 GROUP BY products.id, products.name
 ORDER BY Выручка DESC
 LIMIT 10;
+```
 
+![alt](images/sql4.png)
+
+```sql
 --top 10 товаров по количеству продаж
 SELECT 
     RANK() OVER (ORDER BY SUM(quantity) DESC) AS Ранг,
@@ -302,6 +313,8 @@ GROUP BY customers.id, customers.name
 ORDER BY Разница;
 ```
 
+![alt](images/sql5.png)
+
 8. #### ABC-анализ товаров ####
 Разбить на три группы:<br>
 A - группа товаров с самой большой выручкой с накопительной до 80%<br>
@@ -337,16 +350,15 @@ SELECT
 FROM percent_profit;
 ```
 
+![alt](images/sql6.png)
+
 ## Построение отчета (визуализация) ##
 Рисовать буду в Jupyter Notebook (файл profit.ipynb) используя питоновскую библиотеку matplotlib.
-
-Выполнить [**ноутбук с анализом**](./profit.ipynb) .
 
 <details>
 <summary>Выручка по месяцам</summary>
 
-'''python
-
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
@@ -394,8 +406,8 @@ plt.ylabel('Выручка в млн. руб', fontsize=12)
 plt.xticks(rotation=45, ha='right')
 
 plt.show()
-
-'''    </details>
+```
+</details>
 
 Получился такой график:
 
@@ -403,7 +415,8 @@ plt.show()
 
 <details>
 <summary>Количество заказов по месяцам</summary>
-    '''python
+
+```python
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -439,7 +452,7 @@ plt.xlabel('Месяцы', fontsize=12)
 plt.ylabel('Количество заказов', fontsize=12)
 
 plt.show()
-
-'''    </details>
+```
+</details>
 
 ![alt](images/orders.png)
